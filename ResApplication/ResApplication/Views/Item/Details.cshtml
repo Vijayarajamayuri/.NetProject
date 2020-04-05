@@ -1,0 +1,42 @@
+﻿@model ResApplication.Models.Item
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Item</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Menu.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Menu.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Restaurent.RestaurentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Restaurent.RestaurentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ItemID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
